@@ -1,10 +1,18 @@
+import './tailwind.css'
+
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.tsx'
-import './tailwind.css'
+
+import { RootLayout } from './app/layout'
+import { DiaryRouter } from './router'
+import { DiaryProvider } from './provider/Diary'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
     <React.StrictMode>
-        <App />
+        <DiaryProvider>
+            <RootLayout>
+                <DiaryRouter />
+            </RootLayout>
+        </DiaryProvider>
     </React.StrictMode>
 )
