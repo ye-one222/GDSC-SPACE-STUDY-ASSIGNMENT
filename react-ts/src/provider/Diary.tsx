@@ -30,4 +30,8 @@ const useDiaryUpdate = (): DiaryUpdate => {
     return updateDiary
 }
 
-export { DiaryProvider, useDiaryUpdate, useDiaryValue }
+const useDiary = (): [Diary[], DiaryUpdate] => {
+    return [useDiaryValue(), useDiaryUpdate()]
+}
+
+export { DiaryProvider, useDiaryUpdate, useDiaryValue, useDiary }
