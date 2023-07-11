@@ -1,5 +1,8 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import { DiaryHomePage, DiaryDetailPage, DiaryEmotionLinkPage, DiaryEmotionPage } from '../app'
+import DiaryHomePage from '../app/page'
+import DiaryDetailPage from '../app/detail/[id]/page'
+import DiaryEmotionLinkPage from '../app/emotions/page'
+import DiaryEmotionPage from '../app/emotions/[emotion]/page'
 
 export type DiaryRouterPath = '/' | `/detail/${string}` | '/emotions' | `/emotions/${string}`
 const diaryRouter = createBrowserRouter([
