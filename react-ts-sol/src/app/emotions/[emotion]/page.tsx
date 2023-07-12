@@ -8,9 +8,6 @@ import { util } from '../../../styles'
 import { dateFormat } from '../../../utils'
 import { useStorageDiray } from '../../../hooks/useStorageDiary'
 
-type EmotionPageParams = {
-    emotion: Diary['emotion']
-}
 const DiaryTable = ({
     diary,
     setRemoveSelected,
@@ -46,9 +43,13 @@ const DiaryTable = ({
     )
 }
 
+type EmotionPageParams = {
+    emotion: Diary['emotion']
+}
 export default function EmotionPage() {
     const { emotion } = useParams<EmotionPageParams>()
-    if (emotion === undefined) return
+    if (emotion === undefined) throw Error(`${emotion} is undefined`)
+
     const emotionDiary = useDiaryValue().filter((diary) => diary.emotion === emotion)
     const isEmotionDiaryExsists = emotionDiary.length > 0
     const { remove } = useStorageDiray()
