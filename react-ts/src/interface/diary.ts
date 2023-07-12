@@ -5,4 +5,5 @@ export type Diary = {
     content: string
     emotion: 'bad' | 'soso' | 'good' | 'great' | 'awesome'
     weather: 'sunny' | 'cloud' | 'rain' | 'snow'
+    views: number
 }
