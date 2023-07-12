@@ -1,5 +1,5 @@
 import { Link as RRDLink, type LinkProps as RRDLinkProps } from 'react-router-dom'
-import { type DiaryRouterPath } from '.'
+import { type DiaryRouterPath } from '../router'
 
 interface LinkProps extends RRDLinkProps {
     to: DiaryRouterPath
