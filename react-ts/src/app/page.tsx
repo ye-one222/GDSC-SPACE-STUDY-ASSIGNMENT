@@ -1,3 +1,3 @@
 export default function DiaryHomePage() {
-    return <>Diary Home</>
+    return <>Diary Home yewon</>
 }
